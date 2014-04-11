@@ -119,7 +119,7 @@ class ContentParser(HTMLParser):
         if self.is_header_tag:
             self.section.title = data
         else:
-            if self.section.text:
+            if hasattr(self.section, 'text'):
                 self.section.text.append(data.rstrip('\n'))
 
 #content-holder for html-sections
