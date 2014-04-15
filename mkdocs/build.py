@@ -169,11 +169,7 @@ def build_pages(config):
         try:
             input_content = open(input_path, 'r').read().decode('utf-8')
         except:
-            # Allow 'template:' override in md source files.
-            if 'template' in meta:
-                template = env.get_template(meta['template'][0])
-            else:
-                template = env.get_template('autoindex.html')
+            template = env.get_template('autoindex.html')
 
             context = get_context(
                 page, 'test input', site_navigation,
