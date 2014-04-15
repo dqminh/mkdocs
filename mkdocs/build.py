@@ -173,7 +173,7 @@ def build_pages(config):
 
             context = get_context(
                 page, 'test input', site_navigation,
-                table_of_contents, meta, config
+                '', '', config
             )
             # Render the template.
             input_content = template.render(context)
