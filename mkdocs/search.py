@@ -75,9 +75,9 @@ class SearchIndex(object):
 #data container for a index entry
 class SearchEntry(object):
     def __init__(self, title, text, tags, loc):
-        self.title = title
-        self.text = text
-        self.tags = tags
+        self.title = title.replace("^", "&circ;")
+        self.text = text.replace("^", "&circ;")
+        self.tags = tags.replace("^", "&circ;")
         self.loc = loc
 
 #class for stripping html tags
